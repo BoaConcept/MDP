@@ -20,7 +20,7 @@ function generateSecureLink() {
     const text = document.getElementById('textInput').value;
     const password = document.getElementById('passwordInput').value;
     const encryptedText = CryptoJS.AES.encrypt(text, password).toString();
-    const link = `${window.location.origin}/testBOA/decrypt.html?text=${encodeURIComponent(encryptedText)}`;
+    const link = `${window.location.origin}/MDP/decrypt.html?text=${encodeURIComponent(encryptedText)}`;
     document.getElementById('output').value = link;
 
     const existingButtons = document.querySelectorAll('.link-button');
